@@ -9,6 +9,10 @@ layout: home
 
 This section covers the modeling aspects of MyoAssist, including available models and model preparation.
 
+<div style="text-align: center;">
+  <img src="../assets/modeling.png" alt="Modeling Overview" style="max-width: 75%; height: auto;">
+</div>
+
 ## Available Models
 
 MyoAssist supports multiple musculoskeletal models:
@@ -24,5 +28,5 @@ Learn how to prepare and configure your models for simulation.
 ## Quick Links
 
 - [Available Models](Available_Models)
-- [Model Preparation](model_prep)
 - [Modeling Guide](Modeling)
+- [Model Preparation](model_prep)
