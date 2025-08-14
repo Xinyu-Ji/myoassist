@@ -1,6 +1,6 @@
 {
     "comment":"This is a test configuration for the RL training. very short, rendering enabled",
-    "total_timesteps": 1000,
+    "total_timesteps": 100000,
     "evaluate_param_list":[
         {
             "num_timesteps": 100,
@@ -19,7 +19,7 @@
     },
     "env_params": {
         "env_id": "myoAssistLegImitationExo-v0",
-        "num_envs": 1,
+        "num_envs": 3,
         "seed": 1234,
         "safe_height": 0.7,
         "out_of_trajectory_threshold": 0.6,
@@ -117,7 +117,7 @@
         "sde_sample_freq": -1,
         "target_kl": 0.01,
 
-        "device": "cpu"
+        "device": "cuda:0"
     },
     "policy_params": {
         "custom_policy_params": {

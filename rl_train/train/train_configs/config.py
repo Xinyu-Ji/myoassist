@@ -131,7 +131,7 @@ class TrainSessionConfigBase:
         use_sde: bool = False
         sde_sample_freq: int = -1
         target_kl: float = None
-        device: str = "cpu"
+        device: str = "cuda:0"
     ppo_params: PPOParams = field(default_factory=PPOParams)
 
     

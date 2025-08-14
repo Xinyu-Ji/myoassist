@@ -8,6 +8,8 @@ from datetime import datetime
 from rl_train.envs.environment_handler import EnvironmentHandler
 import subprocess
 
+import multiprocessing
+
 def get_git_info():
     try:
         commit = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode('ascii').strip()
@@ -68,6 +70,7 @@ def ppo_train_with_parameters(config, train_time_step, is_rendering_on, train_lo
     print("learning done!")
 
 if __name__ == '__main__':
+    multiprocessing.set_start_method('spawn')  # 在程序开始处设置
     import argparse
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--config_file_path", type=str, default="", help="path to train config file")
